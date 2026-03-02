@@ -71,7 +71,7 @@
     <projectOwner>Red Hat, Inc.</projectOwner>
     <projectEmail>ncl-dev@redhat.com</projectEmail>
 
-    <version.atlas>1.1.9</version.atlas>
+    <version.atlas>1.2.1</version.atlas>
     <version.commons-cli>1.11.0</version.commons-cli>
     <version.commons-codec>1.21.0</version.commons-codec>
     <version.commons-lang>3.20.0</version.commons-lang>
