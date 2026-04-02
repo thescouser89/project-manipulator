@@ -88,4 +88,17 @@ public class CliTest {
         });
         assertTrue(text.contains("### HELLO!"));
     }
+
+    @Test
+    public void testResolveAndRunRemote() throws Exception {
+        Cli cli = new Cli();
+        String test = tapSystemErrAndOut(() -> {
+            List<File> files = cli.resolveScripts(
+                    new String[] {
+                            "https://raw.githubusercontent.com/cekit/cekit/refs/tags/4.16.0/tests/images/alpine/modules/app/install.sh" });
+            assertEquals(1, files.size());
+            cli.executeScript(files.get(0));
+        });
+        assertTrue(test.contains("Installing application"));
+    }
 }
