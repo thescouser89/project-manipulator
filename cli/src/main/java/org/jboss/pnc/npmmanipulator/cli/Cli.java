@@ -265,6 +265,7 @@ public class Cli {
             if (!"file".equals(ref.getProtocol())) {
                 result = Files.createTempFile(UUID.randomUUID().toString(), null).toFile();
                 FileUtils.copyURLToFile(ref, result);
+                result.setExecutable(true);
             } else {
                 result = new File(ref.getPath());
             }
