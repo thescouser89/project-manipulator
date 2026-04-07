@@ -9,5 +9,5 @@ jobs:
       uses: project-ncl/shared-github-actions/.github/workflows/maven-snapshot.yml@v0.0.12
       with:
         project_name: 'project-ncl/npm-manipulator'
-        java_version: 11
+        java_version: 17
       secrets: inherit
